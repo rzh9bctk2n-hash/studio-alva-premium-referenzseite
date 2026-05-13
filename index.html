@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Studio Alva | Premium Referenzseite im Clean Look</title>
+  <title>Maison Alva | Premium Referenzseite im Apple-Look</title>
 
   <style>
     :root {
       --bg: #f5f5f7;
-      --surface: rgba(255, 255, 255, 0.72);
-      --surface-solid: #ffffff;
-      --text: #101014;
-      --muted: #6e6e73;
-      --soft: #e8e8ed;
+      --white: #ffffff;
+      --black: #0b0b0f;
+      --text: #151519;
+      --muted: #707075;
+      --muted-2: #9b9ba1;
       --line: rgba(0, 0, 0, 0.08);
       --blue: #0071e3;
-      --blue-dark: #0057b8;
-      --purple: #8e6df8;
-      --mint: #67d6b3;
-      --shadow: 0 28px 80px rgba(0, 0, 0, 0.10);
-      --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.07);
-      --radius-xl: 38px;
-      --radius-lg: 28px;
-      --radius-md: 18px;
+      --blue-dark: #005bbf;
+      --silver: #e8e8ed;
+      --glass: rgba(255, 255, 255, 0.68);
+      --shadow: 0 28px 90px rgba(0, 0, 0, 0.12);
+      --shadow-soft: 0 18px 48px rgba(0, 0, 0, 0.075);
+      --radius-xl: 42px;
+      --radius-lg: 30px;
+      --radius-md: 20px;
       --max: 1180px;
     }
 
@@ -60,13 +60,12 @@
       bottom: 18px;
       transform: translateX(-50%);
       z-index: 999;
-      background: rgba(16, 16, 20, 0.78);
+      background: rgba(15, 15, 18, 0.82);
       color: #ffffff;
       padding: 10px 18px;
       border-radius: 999px;
       font-size: 13px;
       font-weight: 650;
-      letter-spacing: -0.01em;
       box-shadow: 0 16px 44px rgba(0, 0, 0, 0.22);
       backdrop-filter: blur(22px);
       -webkit-backdrop-filter: blur(22px);
@@ -78,10 +77,10 @@
       left: 0;
       right: 0;
       z-index: 100;
-      background: rgba(245, 245, 247, 0.76);
+      background: rgba(245, 245, 247, 0.78);
       border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
+      backdrop-filter: blur(26px);
+      -webkit-backdrop-filter: blur(26px);
     }
 
     .nav {
@@ -107,7 +106,7 @@
       width: 32px;
       height: 32px;
       border-radius: 10px;
-      background: linear-gradient(145deg, #111114 0%, #3c3c43 100%);
+      background: linear-gradient(145deg, #101014 0%, #3f3f46 100%);
       color: #ffffff;
       display: grid;
       place-items: center;
@@ -158,21 +157,23 @@
     .hero {
       position: relative;
       min-height: 100vh;
-      padding: 136px 0 62px;
+      padding: 124px 0 70px;
       overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 24%, rgba(0, 113, 227, 0.18) 0%, rgba(0, 113, 227, 0.07) 28%, rgba(245, 245, 247, 0) 58%),
+        linear-gradient(180deg, #ffffff 0%, #f5f5f7 74%);
     }
 
     .hero::before {
       content: "";
       position: absolute;
-      width: 720px;
-      height: 720px;
-      left: 50%;
-      top: 8%;
-      transform: translateX(-50%);
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(142, 109, 248, 0.24) 0%, rgba(103, 214, 179, 0.12) 38%, rgba(245, 245, 247, 0) 70%);
-      filter: blur(6px);
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,0,0,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.035) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(circle at center, black 0%, transparent 62%);
+      opacity: 0.45;
       pointer-events: none;
     }
 
@@ -191,41 +192,41 @@
       width: fit-content;
       margin: 0 auto 22px;
       color: rgba(16, 16, 20, 0.72);
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.74);
+      border: 1px solid rgba(255, 255, 255, 0.9);
       border-radius: 999px;
       padding: 8px 14px;
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 720;
       box-shadow: 0 12px 34px rgba(0, 0, 0, 0.06);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
     }
 
     h1 {
-      max-width: 980px;
+      max-width: 1030px;
       margin: 0 auto 24px;
-      font-size: clamp(54px, 8vw, 118px);
-      line-height: 0.89;
-      letter-spacing: -0.085em;
-      font-weight: 820;
+      font-size: clamp(54px, 8vw, 122px);
+      line-height: 0.88;
+      letter-spacing: -0.09em;
+      font-weight: 840;
     }
 
     .gradient-text {
-      background: linear-gradient(100deg, #111114 0%, #5d5d65 36%, #0071e3 68%, #8e6df8 100%);
+      background: linear-gradient(100deg, #111114 0%, #4e4e55 35%, #0071e3 68%, #8e6df8 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
 
     .hero-text {
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto 34px;
       color: var(--muted);
       font-size: clamp(19px, 2.2vw, 26px);
       line-height: 1.32;
       letter-spacing: -0.035em;
-      font-weight: 560;
+      font-weight: 540;
     }
 
     .hero-actions {
@@ -233,7 +234,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 13px;
-      margin-bottom: 54px;
+      margin-bottom: 58px;
     }
 
     .button-primary,
@@ -257,7 +258,7 @@
     }
 
     .button-secondary {
-      background: rgba(255, 255, 255, 0.72);
+      background: rgba(255, 255, 255, 0.78);
       color: var(--blue);
       border: 1px solid rgba(0, 113, 227, 0.12);
       box-shadow: 0 14px 34px rgba(0, 0, 0, 0.06);
@@ -265,139 +266,216 @@
       -webkit-backdrop-filter: blur(18px);
     }
 
-    .device-showcase {
-      width: min(1040px, 100%);
-      margin: 0 auto;
-      border-radius: 44px;
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.42));
-      border: 1px solid rgba(255, 255, 255, 0.86);
-      box-shadow: var(--shadow);
-      padding: 18px;
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
+    .hero-stage {
       position: relative;
-      overflow: hidden;
+      width: min(1100px, 100%);
+      margin: 0 auto;
+      min-height: 570px;
+      display: grid;
+      place-items: center;
     }
 
-    .device-showcase::after {
-      content: "";
+    .orb {
       position: absolute;
-      inset: auto -80px -140px auto;
-      width: 360px;
-      height: 360px;
-      background: radial-gradient(circle, rgba(0, 113, 227, 0.18), rgba(0, 113, 227, 0));
+      border-radius: 999px;
+      filter: blur(2px);
+      opacity: 0.9;
       pointer-events: none;
     }
 
-    .dashboard {
+    .orb.one {
+      width: 220px;
+      height: 220px;
+      left: 3%;
+      top: 12%;
+      background: radial-gradient(circle at 35% 35%, #ffffff, #b8dcff 42%, rgba(0, 113, 227, 0.1) 72%);
+      box-shadow: 0 30px 90px rgba(0, 113, 227, 0.18);
+    }
+
+    .orb.two {
+      width: 170px;
+      height: 170px;
+      right: 6%;
+      top: 2%;
+      background: radial-gradient(circle at 35% 35%, #ffffff, #ded2ff 42%, rgba(142, 109, 248, 0.08) 72%);
+      box-shadow: 0 30px 90px rgba(142, 109, 248, 0.15);
+    }
+
+    .orb.three {
+      width: 145px;
+      height: 145px;
+      right: 14%;
+      bottom: 8%;
+      background: radial-gradient(circle at 35% 35%, #ffffff, #d8efe8 42%, rgba(103, 214, 179, 0.1) 72%);
+      box-shadow: 0 30px 90px rgba(103, 214, 179, 0.13);
+    }
+
+    .premium-card {
+      position: relative;
+      z-index: 2;
+      width: min(830px, calc(100% - 28px));
+      min-height: 520px;
+      border-radius: 48px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.92), rgba(255,255,255,0.52));
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      overflow: hidden;
+      padding: 18px;
+    }
+
+    .premium-card::before {
+      content: "";
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      left: 50%;
+      top: -180px;
+      transform: translateX(-50%);
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(0, 113, 227, 0.24), rgba(142, 109, 248, 0.12) 42%, rgba(255,255,255,0) 70%);
+      pointer-events: none;
+    }
+
+    .premium-screen {
       position: relative;
       z-index: 1;
-      min-height: 520px;
-      border-radius: 32px;
-      overflow: hidden;
+      width: 100%;
+      min-height: 484px;
+      border-radius: 34px;
       background: #101014;
       color: #ffffff;
+      padding: 30px;
       display: grid;
-      grid-template-columns: 0.88fr 1.12fr;
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+      grid-template-rows: auto 1fr auto;
+      overflow: hidden;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.09);
     }
 
-    .dashboard-left {
-      padding: 38px;
+    .screen-top {
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
-      background: radial-gradient(circle at 20% 12%, rgba(142, 109, 248, 0.32), rgba(16, 16, 20, 0) 42%), #101014;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 38px;
     }
 
-    .dashboard-left h2 {
+    .traffic {
+      display: flex;
+      gap: 8px;
+    }
+
+    .traffic span {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.24);
+    }
+
+    .screen-label {
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .screen-main {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .screen-copy h2 {
       font-size: clamp(34px, 4vw, 58px);
-      line-height: 0.98;
-      letter-spacing: -0.06em;
+      line-height: 0.94;
+      letter-spacing: -0.065em;
       margin-bottom: 16px;
     }
 
-    .dashboard-left p {
-      color: rgba(255, 255, 255, 0.66);
-      font-size: 17px;
-      letter-spacing: -0.02em;
+    .screen-copy p {
+      color: rgba(255,255,255,0.64);
+      font-size: 16px;
+      letter-spacing: -0.025em;
+      max-width: 360px;
     }
 
-    .mini-metrics {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 34px;
-    }
-
-    .metric {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      padding: 17px;
-    }
-
-    .metric strong {
-      display: block;
-      font-size: 27px;
-      letter-spacing: -0.05em;
-      margin-bottom: 5px;
-    }
-
-    .metric span {
-      color: rgba(255, 255, 255, 0.58);
-      font-size: 12px;
-      font-weight: 680;
-    }
-
-    .dashboard-right {
-      position: relative;
-      padding: 26px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      align-content: center;
-      background: linear-gradient(135deg, #1d1d22 0%, #111114 100%);
-    }
-
-    .glass-card {
-      min-height: 165px;
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 21px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
-    }
-
-    .glass-card.large {
-      grid-column: span 2;
-      min-height: 190px;
-      background: linear-gradient(135deg, rgba(0, 113, 227, 0.28), rgba(142, 109, 248, 0.18));
-    }
-
-    .glass-card .icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.13);
+    .screen-visual {
+      min-height: 280px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 50% 24%, rgba(0,113,227,0.42), rgba(142,109,248,0.22) 38%, rgba(255,255,255,0.02) 68%),
+        linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,0.10);
       display: grid;
       place-items: center;
-      font-size: 20px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .glass-card strong {
+    .screen-visual::before,
+    .screen-visual::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .screen-visual::before {
+      width: 280px;
+      height: 280px;
+    }
+
+    .screen-visual::after {
+      width: 190px;
+      height: 190px;
+    }
+
+    .monogram {
+      position: relative;
+      z-index: 1;
+      width: 128px;
+      height: 128px;
+      border-radius: 36px;
+      background: rgba(255,255,255,0.13);
+      border: 1px solid rgba(255,255,255,0.16);
+      display: grid;
+      place-items: center;
+      font-size: 54px;
+      font-weight: 780;
+      letter-spacing: -0.08em;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 24px 70px rgba(0,0,0,0.22);
+    }
+
+    .screen-bottom {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .screen-stat {
+      min-height: 82px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.075);
+      border: 1px solid rgba(255,255,255,0.09);
+      padding: 16px;
+      text-align: left;
+    }
+
+    .screen-stat strong {
       display: block;
-      font-size: 20px;
-      letter-spacing: -0.04em;
-      margin-bottom: 6px;
+      font-size: 24px;
+      letter-spacing: -0.05em;
+      margin-bottom: 3px;
     }
 
-    .glass-card p {
-      color: rgba(255, 255, 255, 0.62);
-      font-size: 14px;
+    .screen-stat span {
+      color: rgba(255,255,255,0.56);
+      font-size: 12px;
+      font-weight: 650;
     }
 
     .section {
@@ -447,8 +525,8 @@
     .service-card {
       min-height: 360px;
       border-radius: var(--radius-lg);
-      background: var(--surface-solid);
-      border: 1px solid rgba(255, 255, 255, 0.8);
+      background: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.85);
       padding: 28px;
       display: flex;
       flex-direction: column;
@@ -462,14 +540,14 @@
       content: "";
       position: absolute;
       inset: -120px -120px auto auto;
-      width: 240px;
-      height: 240px;
+      width: 250px;
+      height: 250px;
       border-radius: 999px;
-      background: radial-gradient(circle, rgba(0, 113, 227, 0.14), rgba(0, 113, 227, 0));
+      background: radial-gradient(circle, rgba(0, 113, 227, 0.13), rgba(0, 113, 227, 0));
     }
 
     .service-card:nth-child(2)::before {
-      background: radial-gradient(circle, rgba(142, 109, 248, 0.16), rgba(142, 109, 248, 0));
+      background: radial-gradient(circle, rgba(142, 109, 248, 0.15), rgba(142, 109, 248, 0));
     }
 
     .service-card:nth-child(3)::before {
@@ -535,7 +613,7 @@
     .feature-inner {
       position: relative;
       z-index: 1;
-      min-height: 620px;
+      min-height: 610px;
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
       gap: 24px;
@@ -594,7 +672,7 @@
       color: #8fd8ff;
     }
 
-    .portrait-card {
+    .image-card {
       position: relative;
       border-radius: 34px;
       overflow: hidden;
@@ -603,14 +681,14 @@
       background: #222;
     }
 
-    .portrait-card img {
+    .image-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       opacity: 0.9;
     }
 
-    .portrait-overlay {
+    .image-overlay {
       position: absolute;
       left: 22px;
       right: 22px;
@@ -623,14 +701,14 @@
       -webkit-backdrop-filter: blur(18px);
     }
 
-    .portrait-overlay strong {
+    .image-overlay strong {
       display: block;
       font-size: 24px;
       letter-spacing: -0.045em;
       margin-bottom: 6px;
     }
 
-    .portrait-overlay p {
+    .image-overlay p {
       color: rgba(255, 255, 255, 0.72);
       font-size: 15px;
     }
@@ -726,657 +804,4 @@
     }
 
     .package-card {
-      border-radius: var(--radius-xl);
-      padding: 30px;
-      background: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.88);
-      box-shadow: var(--shadow-soft);
-      min-height: 520px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .package-card.featured {
-      color: #ffffff;
-      background: radial-gradient(circle at 30% 0%, rgba(0, 113, 227, 0.48), rgba(16, 16, 20, 0) 45%), #101014;
-      border-color: rgba(255, 255, 255, 0.08);
-    }
-
-    .package-card .tag {
-      display: inline-flex;
-      width: fit-content;
-      border-radius: 999px;
-      padding: 7px 11px;
-      background: rgba(0, 113, 227, 0.1);
-      color: var(--blue);
-      font-size: 12px;
-      font-weight: 780;
-      margin-bottom: 24px;
-    }
-
-    .package-card.featured .tag {
-      background: rgba(255, 255, 255, 0.12);
-      color: #8fd8ff;
-    }
-
-    .package-card h3 {
-      font-size: 34px;
-      line-height: 1;
-      letter-spacing: -0.06em;
-      margin-bottom: 12px;
-    }
-
-    .package-card p {
-      color: var(--muted);
-      font-size: 15px;
-      letter-spacing: -0.025em;
-      margin-bottom: 26px;
-    }
-
-    .package-card.featured p {
-      color: rgba(255, 255, 255, 0.66);
-    }
-
-    .package-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .package-list li {
-      list-style: none;
-      display: flex;
-      gap: 10px;
-      color: rgba(16, 16, 20, 0.76);
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .package-card.featured .package-list li {
-      color: rgba(255, 255, 255, 0.78);
-    }
-
-    .package-list li::before {
-      content: "✓";
-      color: var(--blue);
-      font-weight: 900;
-    }
-
-    .package-card.featured .package-list li::before {
-      color: #8fd8ff;
-    }
-
-    .package-cta {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 46px;
-      border-radius: 999px;
-      background: #f5f5f7;
-      color: var(--text);
-      font-weight: 740;
-      margin-top: 30px;
-    }
-
-    .package-card.featured .package-cta {
-      background: var(--blue);
-      color: #ffffff;
-    }
-
-    .contact-panel {
-      border-radius: 48px;
-      background: linear-gradient(145deg, #ffffff 0%, #ededf3 100%);
-      padding: clamp(30px, 5vw, 62px);
-      box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: 0.88fr 1.12fr;
-      gap: 36px;
-      align-items: center;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .contact-panel::before {
-      content: "";
-      position: absolute;
-      width: 480px;
-      height: 480px;
-      right: -160px;
-      top: -180px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(0, 113, 227, 0.18), rgba(142, 109, 248, 0.10) 44%, rgba(255,255,255,0) 70%);
-      pointer-events: none;
-    }
-
-    .contact-copy,
-    .form-card {
-      position: relative;
-      z-index: 1;
-    }
-
-    .contact-copy h2 {
-      font-size: clamp(42px, 6vw, 80px);
-      line-height: 0.92;
-      letter-spacing: -0.075em;
-      margin-bottom: 22px;
-    }
-
-    .contact-copy p {
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.42;
-      letter-spacing: -0.03em;
-      max-width: 480px;
-      margin-bottom: 26px;
-    }
-
-    .contact-list {
-      display: grid;
-      gap: 12px;
-      color: rgba(16, 16, 20, 0.72);
-      font-weight: 660;
-    }
-
-    .form-card {
-      background: rgba(255, 255, 255, 0.74);
-      border: 1px solid rgba(255, 255, 255, 0.86);
-      border-radius: 32px;
-      padding: 26px;
-      box-shadow: var(--shadow-soft);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      display: grid;
-      gap: 14px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .field {
-      display: grid;
-      gap: 7px;
-    }
-
-    label {
-      font-size: 13px;
-      font-weight: 740;
-      color: rgba(16, 16, 20, 0.72);
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      border: 1px solid rgba(0, 0, 0, 0.09);
-      background: rgba(255, 255, 255, 0.82);
-      border-radius: 16px;
-      padding: 14px 14px;
-      font: inherit;
-      color: var(--text);
-      outline: none;
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    input:focus,
-    select:focus,
-    textarea:focus {
-      border-color: rgba(0, 113, 227, 0.54);
-      box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.10);
-    }
-
-    .form-card button {
-      border: 0;
-      min-height: 50px;
-      border-radius: 999px;
-      background: var(--blue);
-      color: #ffffff;
-      font: inherit;
-      font-weight: 760;
-      cursor: pointer;
-      box-shadow: 0 14px 34px rgba(0, 113, 227, 0.23);
-    }
-
-    .form-note {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    footer {
-      width: min(var(--max), calc(100% - 36px));
-      margin: 0 auto;
-      padding: 36px 0 76px;
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      color: var(--muted);
-      font-size: 14px;
-      border-top: 1px solid rgba(0, 0, 0, 0.07);
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 1020px) {
-      .nav-links {
-        display: none;
-      }
-
-      .dashboard,
-      .section-head,
-      .feature-inner,
-      .pricing-wrap,
-      .contact-panel {
-        grid-template-columns: 1fr;
-      }
-
-      .services-grid,
-      .process-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .pricing-intro,
-      .package-card {
-        min-height: auto;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .nav {
-        height: 58px;
-      }
-
-      .logo {
-        font-size: 17px;
-      }
-
-      .nav-cta {
-        display: none;
-      }
-
-      .hero {
-        padding-top: 108px;
-      }
-
-      h1 {
-        font-size: 56px;
-      }
-
-      .hero-text {
-        font-size: 19px;
-      }
-
-      .device-showcase {
-        border-radius: 30px;
-        padding: 10px;
-      }
-
-      .dashboard {
-        border-radius: 24px;
-      }
-
-      .dashboard-left,
-      .dashboard-right {
-        padding: 24px;
-      }
-
-      .dashboard-right,
-      .mini-metrics,
-      .services-grid,
-      .process-grid,
-      .package-grid,
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-
-      .glass-card.large {
-        grid-column: span 1;
-      }
-
-      .section {
-        padding: 66px 0;
-      }
-
-      .feature-band,
-      .contact-panel {
-        border-radius: 32px;
-        padding: 14px;
-      }
-
-      .feature-copy,
-      .contact-panel {
-        padding: 26px;
-      }
-
-      .portrait-card {
-        min-height: 390px;
-      }
-
-      footer {
-        flex-direction: column;
-        padding-bottom: 92px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="demo-badge">Demo-Website · Referenzprojekt von Webdesign_Elbe</div>
-
-  <header class="nav-wrap">
-    <nav class="nav" aria-label="Hauptnavigation">
-      <a href="#top" class="logo" aria-label="Studio Alva Startseite">
-        <span class="logo-mark">A</span>
-        <span>Studio Alva</span>
-      </a>
-
-      <div class="nav-links">
-        <a href="#leistungen">Leistungen</a>
-        <a href="#ansatz">Ansatz</a>
-        <a href="#prozess">Prozess</a>
-        <a href="#pakete">Pakete</a>
-        <a href="#kontakt">Kontakt</a>
-      </div>
-
-      <a href="#kontakt" class="nav-cta">Termin anfragen</a>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="hero" aria-label="Startbereich">
-      <div class="hero-inner">
-        <span class="eyebrow">Premium Referenz · Clean Look · Apple-inspiriert</span>
-        <h1><span class="gradient-text">Klarheit für Entscheidungen, die wachsen sollen.</span></h1>
-        <p class="hero-text">
-          Studio Alva begleitet Selbstständige, Führungskräfte und kleine Unternehmen mit strategischer Beratung, klaren Strukturen und einem ruhigen Blick auf das Wesentliche.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#kontakt" class="button-primary">Erstgespräch anfragen</a>
-          <a href="#leistungen" class="button-secondary">Mehr erfahren</a>
-        </div>
-
-        <div class="device-showcase" aria-label="Visueller Premium-Bereich">
-          <div class="dashboard">
-            <div class="dashboard-left">
-              <div>
-                <h2>Weniger Reibung. Mehr Richtung.</h2>
-                <p>Ein klarer Beratungsprozess für Menschen, die fokussierter entscheiden, arbeiten und auftreten möchten.</p>
-              </div>
-
-              <div class="mini-metrics">
-                <div class="metric">
-                  <strong>01</strong>
-                  <span>Strategie</span>
-                </div>
-                <div class="metric">
-                  <strong>02</strong>
-                  <span>Struktur</span>
-                </div>
-                <div class="metric">
-                  <strong>03</strong>
-                  <span>Fokus</span>
-                </div>
-                <div class="metric">
-                  <strong>04</strong>
-                  <span>Umsetzung</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="dashboard-right">
-              <div class="glass-card large">
-                <div class="icon">✦</div>
-                <div>
-                  <strong>Individuelle Standortanalyse</strong>
-                  <p>Wo stehen Sie, was wirkt bereits, und welche nächsten Schritte bringen wirklich Klarheit?</p>
-                </div>
-              </div>
-
-              <div class="glass-card">
-                <div class="icon">◌</div>
-                <div>
-                  <strong>Ruhige Prozesse</strong>
-                  <p>Strukturen, die den Alltag entlasten.</p>
-                </div>
-              </div>
-
-              <div class="glass-card">
-                <div class="icon">↗</div>
-                <div>
-                  <strong>Klare Wirkung</strong>
-                  <p>Positionierung, die verständlich bleibt.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="leistungen">
-      <div class="section-head">
-        <div>
-          <div class="kicker">Leistungen</div>
-          <h2 class="section-title">Premium muss nicht laut sein.</h2>
-        </div>
-        <p class="section-copy">
-          Diese Referenz zeigt einen besonders reduzierten, hochwertigen Stil für Beratung, Coaching, Praxis, Kosmetikstudio oder persönliche Premium-Dienstleistungen.
-        </p>
-      </div>
-
-      <div class="services-grid">
-        <article class="service-card">
-          <div>
-            <div class="service-icon">⌁</div>
-            <h3>Strategie & Positionierung</h3>
-            <p>Ein klares Profil, verständliche Angebote und eine Außenwirkung, die Vertrauen schafft.</p>
-          </div>
-          <a href="#kontakt" class="service-link">Beratung anfragen →</a>
-        </article>
-
-        <article class="service-card">
-          <div>
-            <div class="service-icon">□</div>
-            <h3>Strukturen & Prozesse</h3>
-            <p>Weniger operative Unruhe durch klare Abläufe, Prioritäten und wiederholbare Routinen.</p>
-          </div>
-          <a href="#kontakt" class="service-link">Mehr Klarheit schaffen →</a>
-        </article>
-
-        <article class="service-card">
-          <div>
-            <div class="service-icon">◎</div>
-            <h3>Fokus & Umsetzung</h3>
-            <p>Begleitung bei Entscheidungen, nächsten Schritten und der konsequenten Umsetzung im Alltag.</p>
-          </div>
-          <a href="#kontakt" class="service-link">Termin vereinbaren →</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="ansatz">
-      <div class="feature-band">
-        <div class="feature-inner">
-          <div class="feature-copy">
-            <div class="kicker">Ansatz</div>
-            <h2>Ein digitaler Auftritt, der Ruhe ausstrahlt.</h2>
-            <p>
-              Für hochwertige Dienstleistungen zählt nicht nur Information, sondern Wirkung: klare Sprache, viel Weißraum, präzise Aussagen und eine Nutzerführung ohne Ablenkung.
-            </p>
-
-            <div class="feature-list">
-              <div class="feature-point"><span>✓</span> Reduzierte Gestaltung mit Premium-Gefühl</div>
-              <div class="feature-point"><span>✓</span> Fokus auf Vertrauen, Persönlichkeit und Klarheit</div>
-              <div class="feature-point"><span>✓</span> Ideal für hochpreisige oder beratungsintensive Angebote</div>
-            </div>
-          </div>
-
-          <div class="portrait-card">
-            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80" alt="Heller moderner Arbeitsbereich als Beispielbild" />
-            <div class="portrait-overlay">
-              <strong>Minimalistisch. Persönlich. Hochwertig.</strong>
-              <p>Ein Look für Marken, die Qualität nicht erklären müssen, sondern spürbar machen wollen.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="prozess">
-      <div class="section-head">
-        <div>
-          <div class="kicker">Prozess</div>
-          <h2 class="section-title">Vom ersten Gespräch zur klaren Linie.</h2>
-        </div>
-        <p class="section-copy">
-          Ein strukturierter Ablauf senkt Hemmschwellen. Besucher verstehen schneller, was sie erwartet, und fragen eher an.
-        </p>
-      </div>
-
-      <div class="process-grid">
-        <article class="process-card">
-          <div class="process-number">01</div>
-          <h3>Erstgespräch</h3>
-          <p>Ein ruhiger Blick auf Ziele, aktuelle Situation und die wichtigsten Engpässe.</p>
-        </article>
-
-        <article class="process-card">
-          <div class="process-number">02</div>
-          <h3>Analyse</h3>
-          <p>Strukturierte Einordnung von Positionierung, Prozessen und Entscheidungswegen.</p>
-        </article>
-
-        <article class="process-card">
-          <div class="process-number">03</div>
-          <h3>Konzept</h3>
-          <p>Klare Empfehlungen, priorisierte Schritte und ein realistischer Umsetzungsplan.</p>
-        </article>
-
-        <article class="process-card">
-          <div class="process-number">04</div>
-          <h3>Begleitung</h3>
-          <p>Umsetzung mit Fokus, Feedback und Anpassungen an die tatsächliche Praxis.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="pakete">
-      <div class="pricing-wrap">
-        <div class="pricing-intro">
-          <div>
-            <div class="kicker">Pakete</div>
-            <h2>Klare Angebote. Ohne Überforderung.</h2>
-            <p>
-              Beispielhafte Paketstruktur für eine Premium-Dienstleistung. Die Preise können später bewusst ersetzt oder nur auf Anfrage kommuniziert werden.
-            </p>
-          </div>
-          <div class="price-note">
-            Demo-Hinweis: Die Pakete sind beispielhaft formuliert und zeigen, wie Beratungsangebote hochwertig und verständlich dargestellt werden können.
-          </div>
-        </div>
-
-        <div class="package-grid">
-          <article class="package-card">
-            <div>
-              <span class="tag">Einstieg</span>
-              <h3>Clarity Session</h3>
-              <p>Für einen konzentrierten Blick auf ein konkretes Thema, eine Entscheidung oder die nächste Entwicklungsphase.</p>
-              <ul class="package-list">
-                <li>90 Minuten Analysegespräch</li>
-                <li>Priorisierung der nächsten Schritte</li>
-                <li>Kompakte Zusammenfassung</li>
-                <li>Konkrete Handlungsempfehlungen</li>
-              </ul>
-            </div>
-            <a href="#kontakt" class="package-cta">Session anfragen</a>
-          </article>
-
-          <article class="package-card featured">
-            <div>
-              <span class="tag">Premium</span>
-              <h3>Strategic Reset</h3>
-              <p>Für Selbstständige und kleine Unternehmen, die Positionierung, Struktur und Umsetzung neu ausrichten möchten.</p>
-              <ul class="package-list">
-                <li>Standortanalyse</li>
-                <li>Positionierung & Angebotslogik</li>
-                <li>Prozess- und Prioritätencheck</li>
-                <li>Begleitung über mehrere Wochen</li>
-              </ul>
-            </div>
-            <a href="#kontakt" class="package-cta">Reset anfragen</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="kontakt">
-      <div class="contact-panel">
-        <div class="contact-copy">
-          <div class="kicker">Kontakt</div>
-          <h2>Bereit für mehr Klarheit?</h2>
-          <p>
-            Dieses Kontaktmodul bleibt bewusst reduziert. Wenige Felder, klare Sprache und ein ruhiger Abschluss passen zum Premium-Charakter der Seite.
-          </p>
-          <div class="contact-list">
-            <span>📍 Alsterblick 14 · 20354 Hamburg</span>
-            <span>☎ 040 12345678</span>
-            <span>✉ hello@studio-alva.de</span>
-          </div>
-        </div>
-
-        <form class="form-card" action="#" method="post">
-          <div class="form-row">
-            <div class="field">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Max Mustermann" />
-            </div>
-
-            <div class="field">
-              <label for="email">E-Mail</label>
-              <input id="email" name="email" type="email" placeholder="name@mail.de" />
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="topic">Thema</label>
-            <select id="topic" name="topic">
-              <option>Strategie & Positionierung</option>
-              <option>Strukturen & Prozesse</option>
-              <option>Fokus & Umsetzung</option>
-              <option>Allgemeine Anfrage</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="message">Nachricht</label>
-            <textarea id="message" name="message" placeholder="Wobei wünschen Sie sich mehr Klarheit?"></textarea>
-          </div>
-
-          <button type="submit">Unverbindlich anfragen</button>
-          <p class="form-note">Demo-Hinweis: Das Formular ist in dieser Referenzseite noch nicht technisch angebunden.</p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div>© 2026 Studio Alva · Demo-Referenzseite</div>
-    <div class="footer-links">
-      <a href="#">Impressum</a>
-      <a href="#">Datenschutz</a>
-      <a href="#top">Nach oben</a>
-    </div>
-  </footer>
-</body>
-</html>
+      border
